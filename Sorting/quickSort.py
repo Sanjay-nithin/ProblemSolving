@@ -1,4 +1,4 @@
-def partition(left, right):
+def partition(arr, left, right):
     pivot = arr[right]
     i = left-1
     for j in range(left, right):
@@ -10,7 +10,7 @@ def partition(left, right):
 
 def quicksort(arr, left, right):
     if left < right:
-        pi = partition(left, right)
+        pi = partition(arr, left, right)
         quicksort(arr, left, pi-1)
         quicksort(arr, pi+1, right)
 
